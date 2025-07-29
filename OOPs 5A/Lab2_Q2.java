@@ -1,5 +1,4 @@
-// Java Program using Abstract Class (Example: Student Record) 
-// Abstract class 
+
 
 abstract class StudentRecord {
 
@@ -18,7 +17,6 @@ abstract class StudentRecord {
 // Subclass extends abstract class
 class CollegeStudent extends StudentRecord {
     // Implementing abstract method
-    @SuppressWarnings("override")
     public void showFees() {
         int fees = 50000;
         System.out.println("College Fees: Rs" + fees);

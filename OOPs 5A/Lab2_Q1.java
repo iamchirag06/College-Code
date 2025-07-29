@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Lab2_Q1 {
