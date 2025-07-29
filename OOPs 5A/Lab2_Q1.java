@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
-public class Lab2 {
+public class Lab2_Q1 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter an Integer:");
-        int input = sc.nextInt();
-
-        IntegerChecker checker = new IntegerChecker(input);
-        checker.displayResult();
-        sc.close();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter an Integer:");
+            int input = sc.nextInt();
+            
+            IntegerChecker checker = new IntegerChecker(input);
+            checker.displayResult();
+        }
     }
 
     public static abstract class NumberChecker<T> {
@@ -35,6 +35,7 @@ public class Lab2 {
             super(number);
         }
 
+        @SuppressWarnings("override")
         public boolean isEven() {
             return number % 2 == 0;
         }
